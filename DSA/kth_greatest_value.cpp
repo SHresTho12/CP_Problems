@@ -1,7 +1,7 @@
-// { Driver Code Starts
-//Initial function template for C++
 
-#include<bits/stdc++.h>
+//https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1#
+//using heap
+#include<bits/stdc++.h> 
 using namespace std;
 
  // } Driver Code Ends
@@ -15,14 +15,18 @@ class Solution{
     // k : find kth smallest element and return using this function
     int kthSmallest(int arr[], int l, int r, int k) {
         //code here
-         priority_queue<int> maxh;
-       for(int i=l;i<=r;i++)
-       {
-          maxh.push(arr[i]);
-          if(maxh.size()>k)
-          maxh.pop(); 
-       }
-       return maxh.top();
+          vector<int>A(arr,arr+r);
+          
+      
+        make_heap(A.begin(),A.end());
+        for(int i = k;i>1;i--){
+            
+           pop_heap(A.begin(),A.end());
+           A.pop_back();
+           
+        }
+       
+        return A[0];
     }
 };
 
@@ -44,7 +48,7 @@ int main()
         int k;
         cin>>k;
         Solution ob;
-        cout<<ob.kthSmallest(a, 0, number_of_elements-1, k)<<endl;
+        cout<<ob.kthSmallest(a, 0, number_of_elements, k)<<endl;
     }
     return 0;
 }  // } Driver Code Ends
