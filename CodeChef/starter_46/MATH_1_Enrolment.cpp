@@ -33,16 +33,18 @@ using namespace std;
 int main()
 {
     joldi
-int t ;
-cin>>t;
-while(t--){
-    
 
+    int t;
+    cin>>t;
+    while(t--){
+       int available , expected ;
+       cin>>available >> expected;
+       if(available >= expected){
+           cout<<0<<endl;
+       }
+       else cout<<expected-available<<endl;
 
-
-
-}
-
+    }
 
     }
 

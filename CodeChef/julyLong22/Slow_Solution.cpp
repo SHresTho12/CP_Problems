@@ -33,16 +33,28 @@ using namespace std;
 int main()
 {
     joldi
+
 int t ;
 cin>>t;
 while(t--){
     
+int maxT , maxN , maxSum ;
+cin>>maxT>>maxN>>maxSum;
 
+int testCase = maxSum / maxN;
+int extra = maxSum % maxN;
+int result = 0;
+if(testCase < maxT){ 
 
+    result = (testCase * (maxN * maxN))+ (extra*extra);
+}
+else{
 
+    result = maxT * (maxN * maxN);
+}
+cout <<result <<endl;
 
 }
-
 
     }
 

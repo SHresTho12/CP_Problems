@@ -33,16 +33,12 @@ using namespace std;
 int main()
 {
     joldi
-int t ;
-cin>>t;
-while(t--){
-    
 
-
-
-
-}
-
+    int t;
+    cin>>t;
+    while(t--){
+       
+    }
 
     }
 
