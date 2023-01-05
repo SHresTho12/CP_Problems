@@ -36,7 +36,11 @@ int main()
 int t ;
 cin>>t;
 while(t--){
-    
+    int hour ;
+    cin>>hour;
+    int min = hour * 60 ;
+    int result = min / 20 ;
+    cout<<result<<endl;
 
 
 

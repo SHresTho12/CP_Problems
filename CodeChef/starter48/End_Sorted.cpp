@@ -36,11 +36,25 @@ int main()
 int t ;
 cin>>t;
 while(t--){
-    
+    int n;
+    cin>>n;
+    vector<int> numbers ;
+    for(int i=0 ; i< n; i++){
+        int a ;
+        cin>>a;
+        numbers.push_back(a);
+    }
 
+int min = 0 ,minNum = 100001;
+int max = n-1 , maxNum = -1;
+for(int i = 0; i < n; i++){
+    if(numbers[i]<minNum){min = i;minNum=numbers[i];}
+    if(numbers[i]>maxNum){max = i;maxNum=numbers[i];}
+}
 
-
-
+if(min ==0 && max == n-1)cout<<0<<endl;
+else if(min > max)cout<<(n-1 - max) + min-1<<endl;
+else cout<<n-1 - max+min<<endl;
 }
 
 

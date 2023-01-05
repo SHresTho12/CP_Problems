@@ -33,16 +33,31 @@ using namespace std;
 int main()
 {
     joldi
-int t ;
-cin>>t;
-while(t--){
+
+    int t;
+    cin>>t;
+    while(t--){
+       int n ;
+       cin>>n;
+        map<int , int> arr;
+       for(int i = 0 ; i  < n  ; i ++){
+           int temp ;
+           cin>> temp;
+           arr[temp]++;
+       }
+    int flag = 0;
+    map<int, int>::iterator i;
+    for(i = arr.begin() ; i != arr.end() ;++i){
+        if( (i->second )% (i->first )!= 0) flag =1;
+
     
+        
+    }
 
 
-
-
-}
-
+    if(flag == 0) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+    }
 
     }
 

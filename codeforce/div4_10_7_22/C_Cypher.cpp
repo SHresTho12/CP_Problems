@@ -36,11 +36,45 @@ int main()
 int t ;
 cin>>t;
 while(t--){
-    
+    int n;
+    cin>>n;
+    vector<int> numbers ;
+    for(int i= 0 ; i< n;i++){
+        int a;
+        cin>>a;
+        numbers.push_back(a);
+    }
+    vector<string>moves;
+    for(int i=0; i<n;i++){
+        int moves;
+        cin>>moves;
+        string s;
+        cin>>s;
+       for(int j = 0 ; j < moves; j++){
+           if(s[j]=='U'){
+               if(numbers[i] == 0){ 
+                   numbers[i]  = 9;
+               }
+               else{
+                   numbers[i]--;
+               }
+           }
+           else{
+               if(numbers[i] == 9){ 
+                   numbers[i]  = 0;
+               }
+               else{
+                   numbers[i]++;
+               }
+           }
+       }
 
 
-
-
+    }
+    for(int i= 0 ; i< n;i++){
+        cout<<numbers[i]<<" ";
+    }
+    cout<<endl;
 }
 
 

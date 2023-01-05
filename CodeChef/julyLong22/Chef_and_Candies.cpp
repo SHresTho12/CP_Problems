@@ -33,16 +33,21 @@ using namespace std;
 int main()
 {
     joldi
+
 int t ;
 cin>>t;
 while(t--){
     
-
-
-
+int n , x;
+cin>>n>>x;
+if(x>=n){
+    cout<<0<<endl;continue;
+}
+int extra = n -x;
+if(extra %4 == 0){ cout<<extra/4<<endl;continue; }
+else cout<<extra/4 +1<<endl;
 
 }
-
 
     }
 

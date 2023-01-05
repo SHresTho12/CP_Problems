@@ -36,13 +36,35 @@ int main()
 int t ;
 cin>>t;
 while(t--){
-    
-
-
-
-
+    int n;
+    cin>>n;
+    map<int,int> heights;
+    int max = 0;
+    for(int i=0 ; i<n ; i++){
+        int a;
+        cin>>a;
+        if(a>max) max = a;
+        heights[a]++;
+    }
+map<int, int>::iterator itr;
+int result = 0;
+int maxCnt = 0;
+for(itr = heights.begin() ; itr != heights.end() ; ++itr){
+    if(itr -> second == 1){
+        result++;
+    }
+    if(maxCnt < itr->second) maxCnt = itr-> second;
 }
 
-
+if(result%2 != 0){ int r = result/2 + 1;
+if(heights[max] == 1){
+    if(maxCnt == 2){
+        r++;
     }
 
+}
+cout<<r<<endl;
+ }
+else cout<< result/2 <<endl;
+    }
+}

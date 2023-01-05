@@ -36,7 +36,28 @@ int main()
 int t ;
 cin>>t;
 while(t--){
-    
+    int n;
+    cin>>n;
+    vector<string> strings;
+    for(int i=0 ; i < n ; i++){
+        string s;
+        cin>>s;
+       strings.push_back(s);
+        
+    }
+int result[100001] = {0};
+
+for(int i=0 ; i < n;i++){
+    string temp = strings[i];
+    for(int j = 0 ; j < n ; j++){
+        string temp2 = temp+strings[j];
+        if(find(strings.begin(),strings.end(),temp2)){
+            
+        }
+    }
+}
+
+}
 
 
 

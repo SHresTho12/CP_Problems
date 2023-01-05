@@ -36,8 +36,18 @@ int main()
 int t ;
 cin>>t;
 while(t--){
-    
-
+    int x;
+    cin>>x;
+    if(x%2 == 0 || x%7 == 0){
+        cout<<"YES"<<endl;
+        continue;
+    }
+if(x == 1 || x == 3 || x ==5){
+    cout<<"NO"<<endl;
+}
+else{
+    cout<<"YES"<<endl;
+}
 
 
 

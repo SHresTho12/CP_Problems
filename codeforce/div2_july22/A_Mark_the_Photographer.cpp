@@ -38,7 +38,28 @@ cin>>t;
 while(t--){
     
 
+int n,x; 
+ cin>>n>>x;
+ vector<int> heights;
+ for(int i=0 ; i<2*n ; i++){
+     int temp;
+     cin>> temp;
+     heights.push_back(temp);
+ }
+sort(heights.begin(),heights.end());
+int flag=0;
+for(int i = 0 , j = n ; i<n ; i++,j++){
+    
+if(heights[j]-heights[i]<x){
+    flag = 1;
 
+    break;
+}
+}
+
+
+if(flag == 1)cout<<"NO"<<endl;
+else cout<<"YES"<<endl;
 
 
 }

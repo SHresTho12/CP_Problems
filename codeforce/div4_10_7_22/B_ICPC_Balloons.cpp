@@ -36,11 +36,25 @@ int main()
 int t ;
 cin>>t;
 while(t--){
+    int len;
+    cin>>len;
+string s;
+cin>>s;
+int score[26] = {0};
+
+
+for(int i = 0 ; i < len ; i++){
+    int a=s[i];
     
-
-
-
-
+    if(score[a-65] == 0){ score[a-65]+=2;}
+    else score[a-65]++;
+}
+int result=0;
+for(int i =0;i < 26;i++){
+   // cout<<score[i]<<endl;
+    result=result+score[i];
+}
+cout<<result<<endl;
 }
 
 

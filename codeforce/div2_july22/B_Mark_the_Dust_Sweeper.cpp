@@ -38,9 +38,59 @@ cin>>t;
 while(t--){
     
 
+int n ;
+ cin>>n;
+ vector<int> dust(n);
+//  for(int i=0;i < n; i++){
+//      int tmep ;
+//      cin>>tmep;
+//      dust.push_back(tmep);
+
+//  }
+
+for(int i = 0 ; i < n ; i++){
+ 
+cin>>dust[i];
+
+
+}
+// int ptr = 0 ;
+// while(ptr < n && dust[ptr] == 0)
+//         ptr++;
 
 
 
+
+ll result = 0;
+// for(int i =  ptr ; i < n-1 ; ++i){
+//     result += dust[i];
+//         if(dust[i] == 0) result++;
+// }
+
+
+
+// bool flag = false ;
+// for(int i  = 0 ; i < n-1 ; i++){
+// if( dust[i] != 0 ){ 
+//     flag = true;
+//     result = result + dust[i];
+
+
+// }
+// else{
+//     if(flag){result++;
+// }}
+// }
+int numZeros = 0 ;
+
+for(int i = n-2 ; i>=0;i--){
+if( dust[i] == 0)numZeros++;
+else{
+    result = result + dust[i] + numZeros;
+    numZeros = 0;
+}
+}
+cout<<result<<endl;
 }
 
 

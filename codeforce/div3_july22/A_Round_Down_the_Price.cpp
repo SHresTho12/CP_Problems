@@ -37,7 +37,20 @@ int t ;
 cin>>t;
 while(t--){
     
-
+int m;
+cin>>m;
+if(m<10){
+    cout<<abs(1-m)<<endl;
+    continue;
+}
+else{
+    string s = to_string(m);
+   int len = s.length();
+    
+    int target = pow(10,len-1);
+    
+    cout<<m-target<<endl;
+}
 
 
 

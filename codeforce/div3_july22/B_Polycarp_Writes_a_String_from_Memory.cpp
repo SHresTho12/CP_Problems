@@ -5,6 +5,7 @@
 #include<map>
 #include<vector>
 #include<iomanip>
+#include<set>
 #define ll                      long long
 #define min3(a,b,c)             min(a,min(b,c))
 #define max3(a,b,c)             max(a,max(b,c))
@@ -37,12 +38,22 @@ int t ;
 cin>>t;
 while(t--){
     
-
-
-
+string str;
+cin>>str;
+int ans = 1;
+set<char> s;
+for(int i=0 ; i<str.length() ; i++){
+    s.insert(str[i]);
+    if(s.size()>3){
+        ans++;
+        s.clear();
+        s.insert(str[i]);
+    }
 
 }
 
+cout<<ans<<endl;
 
     }
 
+}
