@@ -23,10 +23,37 @@
     cin.tie(NULL);
 
 #define MAX 32000
+#define f(i, t) for (int i = 0; i < t; i++)
 
 using namespace std;
 
 int main()
 {
-    joldi
+    joldi int tc;
+    cin >> tc;
+    while (tc--)
+    {
+        int n;
+        cin >> n;
+        int numOfOnes = 0;
+        int moves = 0;
+        f(i, n)
+        {
+            int x;
+            cin >> x;
+            if (x == 1)
+                numOfOnes++;
+        }
+        if (numOfOnes > 0 && numOfOnes % 2 == 0)
+        {
+            moves = moves + numOfOnes / 2;
+        }
+        else if (numOfOnes > 0 && numOfOnes % 2 != 0)
+        {
+            moves = moves + numOfOnes / 2 + 1;
+        }
+
+        moves = moves + (n - numOfOnes);
+        cout << moves << endl;
+    }
 }

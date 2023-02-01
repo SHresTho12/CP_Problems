@@ -24,7 +24,7 @@
 
 
 #define MAX 32000
-#define for(i , t )              for(int i =0 ; i<t; i++)
+#define f(i , t )              for(int i =0 ; i<t; i++)
 
 using namespace std;
 
