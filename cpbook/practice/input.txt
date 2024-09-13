@@ -1,0 +1,5 @@
+I love CS323 competitive
+Programming. I also love 
+Algorithms and algorithms
+....... you must stop after reading this line of inpput
+this should not be printed
